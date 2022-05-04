@@ -1,3 +1,10 @@
+#Write a function howSum(targetSum, numbers) that takes in a target sum and an array of numbers as arguments.
+#The function should return an array containing any combination of elements that add up to exactly the target sum. If there is no combination that adds up to the target sum, then return null.
+#If there are multiple combinations possible, you may return any single one.
+
+#Solution --> Solved with help of dynamic programming.
+
+
 def howSum(targetSum, numbers, memo=None):
     if memo is None:
         memo = {}
