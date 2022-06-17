@@ -1,4 +1,5 @@
-#Problem -- interviewbit.com/problems/add-one-to-number/
+# Problem -- interviewbit.com/problems/add-one-to-number/
+
 
 class Solution:
     # @param A : list of integers
@@ -12,7 +13,7 @@ class Solution:
             A[i] = (A[i] + 1) % 10
             if A[i] != 0:
                 break
-        
+
         startIdx = 0
         while startIdx < n:
             if A[startIdx] != 0:

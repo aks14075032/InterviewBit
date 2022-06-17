@@ -1,6 +1,7 @@
-def swapPositions(list, pos1, pos2):    
+def swapPositions(list, pos1, pos2):
     list[pos1], list[pos2] = list[pos2], list[pos1]
     return list
+
 
 class Solution:
     # @param A : list of integers
@@ -10,8 +11,8 @@ class Solution:
         A.sort()
         i = 0
         while i < n:
-            if i+1 >= n: 
+            if i + 1 >= n:
                 break
-            swapPositions(A, i, i+1)
-            i = i+2
+            swapPositions(A, i, i + 1)
+            i = i + 2
         return A

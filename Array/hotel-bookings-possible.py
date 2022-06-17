@@ -1,4 +1,5 @@
-#Problem -- https://www.interviewbit.com/problems/hotel-bookings-possible/
+# Problem -- https://www.interviewbit.com/problems/hotel-bookings-possible/
+
 
 class Solution:
     # @param arrive : list of integers
@@ -8,8 +9,8 @@ class Solution:
     def hotel(self, arrive, depart, K):
         arrive.sort()
         depart.sort()
-        
+
         for i in range(len(arrive)):
-            if i+K < len(arrive) and arrive[i+K] <= depart[i]:
+            if i + K < len(arrive) and arrive[i + K] <= depart[i]:
                 return 0
         return 1

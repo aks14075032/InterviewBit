@@ -8,4 +8,3 @@ class Solution:
             if arr[abs(arr[i])] < 0:
                 return abs(A[i])
             arr[abs(arr[i])] = -arr[abs(arr[i])]
-        

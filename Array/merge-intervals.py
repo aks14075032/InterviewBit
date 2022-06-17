@@ -1,10 +1,11 @@
-#Problem -- https://www.interviewbit.com/problems/merge-intervals/
+# Problem -- https://www.interviewbit.com/problems/merge-intervals/
 
 # Definition for an interval.
 # class Interval:
 #     def __init__(self, s=0, e=0):
 #         self.start = s
 #         self.end = e
+
 
 class Solution:
     # @param intervals, a list of Intervals
@@ -16,13 +17,15 @@ class Solution:
         pos = -1
         ans = []
         for i in range(n):
-            if max(new_interval.start, intervals[i].start) <= min(new_interval.end, intervals[i].end):
+            if max(new_interval.start, intervals[i].start) <= min(
+                new_interval.end, intervals[i].end
+            ):
                 curr.start = min(curr.start, intervals[i].start)
                 curr.end = max(curr.end, intervals[i].end)
             else:
                 if curr.end < intervals[i].start:
-                    ans.append(curr);
-                    pos=i
+                    ans.append(curr)
+                    pos = i
                     break
                 else:
                     ans.append(intervals[i])
