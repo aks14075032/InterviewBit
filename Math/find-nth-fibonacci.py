@@ -1,5 +1,7 @@
-#Problem -- https://www.interviewbit.com/problems/find-nth-fibonacci/hints/
+# Problem -- https://www.interviewbit.com/problems/find-nth-fibonacci/hints/
 mod = 1000000007
+
+
 def multiply(f, m):
 
     a = (f[0][0] * m[0][0] % mod + f[0][1] * m[1][0] % mod) % mod
@@ -11,7 +13,8 @@ def multiply(f, m):
     f[1][0] = c
     f[1][1] = d
 
-def power (F,n):
+
+def power(F, n):
     if n == 0 or n == 1:
         return
     M = [[1, 1], [1, 0]]
@@ -21,6 +24,7 @@ def power (F,n):
 
     if n % 2 != 0:
         multiply(F, M)
+
 
 class Solution:
     # @param A : integer
