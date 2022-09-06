@@ -1,11 +1,11 @@
-#https://www.interviewbit.com/problems/flip-array/
+# https://www.interviewbit.com/problems/flip-array/
 class Solution:
     # @param A : tuple of integers
     # @return an integer
     def solve(self, A):
         s, n = sum(A) // 2 + 1, len(A) + 1
 
-        dp = [[i and float('inf') or 0] * (n) for i in range(s)]
+        dp = [[i and float("inf") or 0] * (n) for i in range(s)]
 
         for i in range(s):
             for j in range(1, n):
@@ -15,6 +15,6 @@ class Solution:
                     dp[i][j] = dp[i][j - 1]
 
         for row in dp[::-1]:
-            if row[-1] < float('inf'):
+            if row[-1] < float("inf"):
                 return row[-1]
         return None

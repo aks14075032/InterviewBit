@@ -31,7 +31,7 @@ class Solution:
         if n < B:
             return -1
 
-        result = 10 ** 9
+        result = 10**9
         while start <= end:
             mid = (start + end) // 2
             # print(mid)
